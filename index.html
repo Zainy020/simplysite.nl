@@ -1,0 +1,1384 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>SimplySites | Professionele websites vanaf €149</title>
+
+<meta name="description" content="SimplySites maakt moderne, snelle en betaalbare websites voor ondernemers. Professioneel, mobielvriendelijk en volledig op maat.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+scroll-behavior:smooth;
+font-family:Poppins,sans-serif;
+}
+
+body{
+
+background:#f7f9fc;
+color:#1e293b;
+overflow-x:hidden;
+
+}
+
+section{
+
+padding:100px 8%;
+
+}
+
+a{
+
+text-decoration:none;
+
+}
+
+ul{
+
+list-style:none;
+
+}
+
+:root{
+
+--primary:#2563eb;
+--secondary:#1d4ed8;
+--dark:#0f172a;
+--light:#ffffff;
+--gray:#64748b;
+--shadow:0 20px 50px rgba(0,0,0,.08);
+
+}
+
+header{
+
+position:fixed;
+top:0;
+left:0;
+width:100%;
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:20px 8%;
+background:rgba(255,255,255,.85);
+backdrop-filter:blur(18px);
+z-index:999;
+box-shadow:0 5px 25px rgba(0,0,0,.05);
+
+}
+
+.logo{
+
+font-size:30px;
+font-weight:800;
+color:var(--primary);
+
+}
+
+.logo span{
+
+color:var(--dark);
+
+}
+
+nav{
+
+display:flex;
+gap:35px;
+
+}
+
+nav a{
+
+color:#334155;
+font-weight:500;
+transition:.3s;
+
+}
+
+nav a:hover{
+
+color:var(--primary);
+
+}
+
+.btn{
+
+padding:15px 30px;
+background:var(--primary);
+color:white;
+border-radius:50px;
+font-weight:600;
+transition:.3s;
+
+}
+
+.btn:hover{
+
+background:var(--secondary);
+transform:translateY(-3px);
+
+}
+
+.hero{
+
+min-height:100vh;
+display:flex;
+align-items:center;
+justify-content:space-between;
+gap:80px;
+padding-top:120px;
+
+}
+
+.hero-left{
+
+flex:1;
+
+}
+
+.hero-left h1{
+
+font-size:65px;
+line-height:1.1;
+margin-bottom:25px;
+
+}
+
+.hero-left span{
+
+color:var(--primary);
+
+}
+
+.hero-left p{
+
+font-size:19px;
+color:var(--gray);
+line-height:1.8;
+margin-bottom:40px;
+
+}
+
+.hero-buttons{
+
+display:flex;
+gap:20px;
+flex-wrap:wrap;
+
+}
+
+.btn-outline{
+
+padding:15px 30px;
+border:2px solid var(--primary);
+border-radius:50px;
+color:var(--primary);
+font-weight:600;
+transition:.3s;
+
+}
+
+.btn-outline:hover{
+
+background:var(--primary);
+color:white;
+
+}
+
+.hero-right{
+
+flex:1;
+display:flex;
+justify-content:center;
+
+}
+
+.mockup{
+
+width:100%;
+max-width:560px;
+background:white;
+border-radius:25px;
+box-shadow:var(--shadow);
+overflow:hidden;
+animation:float 4s ease-in-out infinite;
+
+}
+
+.browser{
+
+height:45px;
+background:#eef2ff;
+display:flex;
+align-items:center;
+padding:0 20px;
+gap:10px;
+
+}
+
+.circle{
+
+width:12px;
+height:12px;
+border-radius:50%;
+
+}
+
+.red{
+
+background:#ef4444;
+
+}
+
+.yellow{
+
+background:#facc15;
+
+}
+
+.green{
+
+background:#22c55e;
+
+}
+
+.mockup-content{
+
+padding:40px;
+
+}
+
+.card{
+
+background:#f8fafc;
+padding:25px;
+border-radius:20px;
+margin-bottom:20px;
+
+}
+
+.card h3{
+
+margin-bottom:10px;
+
+}
+
+.badge{
+
+display:inline-block;
+padding:8px 15px;
+background:#dbeafe;
+color:var(--primary);
+border-radius:30px;
+font-size:14px;
+margin-bottom:20px;
+
+}
+
+.stats{
+
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:20px;
+margin-top:60px;
+
+}
+
+.stat{
+
+background:white;
+padding:25px;
+border-radius:20px;
+text-align:center;
+box-shadow:var(--shadow);
+
+}
+
+.stat h2{
+
+font-size:38px;
+color:var(--primary);
+
+}
+
+.stat p{
+
+color:var(--gray);
+
+}
+
+.background{
+
+position:fixed;
+width:700px;
+height:700px;
+background:linear-gradient(#60a5fa,#2563eb);
+filter:blur(180px);
+opacity:.15;
+right:-200px;
+top:-200px;
+z-index:-1;
+
+}
+
+@keyframes float{
+
+0%,100%{
+
+transform:translateY(0);
+
+}
+
+50%{
+
+transform:translateY(-18px);
+
+}
+
+}
+
+@media(max-width:900px){
+
+.hero{
+
+flex-direction:column;
+text-align:center;
+
+}
+
+.hero-buttons{
+
+justify-content:center;
+
+}
+
+.stats{
+
+grid-template-columns:1fr;
+
+}
+
+nav{
+
+display:none;
+
+}
+
+}
+/* ---------- TITELS ---------- */
+
+.title{
+    text-align:center;
+    margin-bottom:70px;
+}
+
+.title span{
+    color:var(--primary);
+    font-weight:700;
+    letter-spacing:2px;
+    text-transform:uppercase;
+}
+
+.title h2{
+    font-size:45px;
+    margin:20px 0;
+}
+
+.title p{
+    max-width:750px;
+    margin:auto;
+    color:var(--gray);
+    line-height:1.8;
+}
+
+/* ---------- OVER / WAAROM / PAKKETTEN ---------- */
+
+.about-grid,
+.why-grid,
+.pricing{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+    gap:30px;
+}
+
+.about-card,
+.why-box,
+.plan{
+    background:white;
+    padding:40px;
+    border-radius:25px;
+    box-shadow:var(--shadow);
+    transition:.35s;
+}
+
+.about-card:hover,
+.why-box:hover,
+.plan:hover{
+    transform:translateY(-10px);
+    box-shadow:0 25px 60px rgba(0,0,0,.12);
+}
+
+.why-box h1{
+    font-size:55px;
+    margin-bottom:20px;
+}
+
+.price{
+    font-size:55px;
+    color:var(--primary);
+    font-weight:800;
+    margin:20px 0;
+}
+
+.plan ul{
+    margin:25px 0;
+}
+
+.plan li{
+    margin:15px 0;
+}
+
+.popular{
+    border:3px solid var(--primary);
+    transform:scale(1.05);
+    position:relative;
+}
+
+.popular-tag{
+    position:absolute;
+    top:-18px;
+    left:50%;
+    transform:translateX(-50%);
+    background:var(--primary);
+    color:white;
+    padding:10px 20px;
+    border-radius:30px;
+    font-size:14px;
+}
+
+/* ---------- OFFER ---------- */
+
+.offer{
+    text-align:center;
+}
+
+.offer-box{
+    max-width:900px;
+    margin:40px auto 0;
+    padding:70px;
+    border-radius:30px;
+    background:linear-gradient(135deg,#2563eb,#1d4ed8);
+    color:white;
+    box-shadow:var(--shadow);
+}
+
+.offer-box h3{
+    font-size:35px;
+    margin-bottom:25px;
+}
+
+.offer .btn{
+    background:white;
+    color:var(--primary);
+    margin-top:35px;
+    display:inline-block;
+}
+
+.offer .btn:hover{
+    background:#f1f5f9;
+}
+
+/* ---------- CONTACT ---------- */
+
+form{
+    max-width:750px;
+    margin:auto;
+    display:flex;
+    flex-direction:column;
+    gap:20px;
+}
+
+input,
+textarea{
+    padding:18px;
+    border:none;
+    border-radius:15px;
+    background:white;
+    box-shadow:var(--shadow);
+    font-size:16px;
+    outline:none;
+}
+
+textarea{
+    resize:vertical;
+}
+
+form button{
+    border:none;
+    cursor:pointer;
+}
+
+/* ---------- FAQ ---------- */
+
+.faq{
+    max-width:900px;
+    margin:auto;
+}
+
+.faq-item{
+    margin-bottom:20px;
+    border-radius:20px;
+    overflow:hidden;
+    background:white;
+    box-shadow:var(--shadow);
+}
+
+.faq-item button{
+    width:100%;
+    border:none;
+    background:none;
+    padding:25px;
+    font-size:18px;
+    display:flex;
+    justify-content:space-between;
+    cursor:pointer;
+}
+
+.answer{
+    max-height:0;
+    overflow:hidden;
+    padding:0 25px;
+    color:var(--gray);
+    transition:.35s;
+}
+
+.faq-item.open .answer{
+    max-height:250px;
+    padding:0 25px 25px;
+}
+
+/* ---------- FOOTER ---------- */
+
+footer{
+    background:var(--dark);
+    color:white;
+    padding:80px 8%;
+    text-align:center;
+}
+
+footer h2{
+    font-size:40px;
+    margin-bottom:15px;
+}
+
+footer span{
+    color:#60a5fa;
+}
+
+.footer-links{
+    display:flex;
+    justify-content:center;
+    gap:30px;
+    margin:35px 0;
+    flex-wrap:wrap;
+}
+
+.footer-links a{
+    color:white;
+}
+
+.copy{
+    opacity:.7;
+}
+
+/* ---------- WHATSAPP ---------- */
+
+.whatsapp{
+    position:fixed;
+    right:30px;
+    bottom:30px;
+    width:65px;
+    height:65px;
+    border-radius:50%;
+    background:#25D366;
+    color:white;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-size:30px;
+    text-decoration:none;
+    box-shadow:0 15px 35px rgba(0,0,0,.2);
+    transition:.3s;
+    z-index:999;
+}
+
+.whatsapp:hover{
+    transform:scale(1.1);
+}
+
+/* ---------- TOP BUTTON ---------- */
+
+#topBtn{
+    position:fixed;
+    right:30px;
+    bottom:110px;
+    width:55px;
+    height:55px;
+    border:none;
+    border-radius:50%;
+    background:var(--primary);
+    color:white;
+    font-size:22px;
+    display:none;
+    justify-content:center;
+    align-items:center;
+    cursor:pointer;
+    box-shadow:var(--shadow);
+}
+
+/* ---------- RESPONSIVE ---------- */
+
+@media(max-width:900px){
+
+.title h2{
+    font-size:34px;
+}
+
+.offer-box{
+    padding:40px 25px;
+}
+
+.offer-box h3{
+    font-size:28px;
+}
+
+.popular{
+    transform:none;
+}
+
+.footer-links{
+    flex-direction:column;
+    gap:15px;
+}
+
+}
+</style>
+
+</head>
+
+<body>
+
+<div class="background"></div>
+
+<header>
+
+<div class="logo">
+Simply<span>Sites</span>
+</div>
+
+<nav>
+
+<a href="#">Home</a>
+<a href="#over">Over</a>
+<a href="#pakketten">Pakketten</a>
+<a href="#reviews">Reviews</a>
+<a href="#contact">Contact</a>
+
+</nav>
+
+<a class="btn" href="#contact">
+Gratis offerte
+</a>
+
+</header>
+
+<section class="hero">
+
+<div class="hero-left">
+
+<div class="badge">
+
+🚀 Websites vanaf €149
+
+</div>
+
+<h1>
+
+Professionele websites
+voor iedere
+<span>ondernemer.</span>
+
+</h1>
+
+<p>
+
+SimplySites helpt ondernemers groeien met moderne,
+snelle en mobielvriendelijke websites.
+Professioneel design, betaalbare prijzen en persoonlijke service.
+
+</p>
+
+<div class="hero-buttons">
+
+<a href="#pakketten" class="btn">
+
+Bekijk pakketten
+
+</a>
+
+<a href="#contact" class="btn-outline">
+
+Neem contact op
+
+</a>
+
+</div>
+
+<div class="stats">
+
+<div class="stat">
+
+<h2>24u</h2>
+
+<p>Reactietijd</p>
+
+</div>
+
+<div class="stat">
+
+<h2>100%</h2>
+
+<p>Mobielvriendelijk</p>
+
+</div>
+
+<div class="stat">
+
+<h2>€149</h2>
+
+<p>Vanaf prijs</p>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="hero-right">
+
+<div class="mockup">
+
+<div class="browser">
+
+<div class="circle red"></div>
+<div class="circle yellow"></div>
+<div class="circle green"></div>
+
+</div>
+
+<div class="mockup-content">
+
+<div class="card">
+
+<h3>SimplySites</h3>
+
+<p>Moderne websites voor ondernemers.</p>
+
+</div>
+
+<div class="card">
+
+⭐ Responsive Design
+
+</div>
+
+<div class="card">
+
+⚡ Supersnel
+
+</div>
+
+<div class="card">
+
+📈 SEO Ready
+
+</div>
+</div>
+
+</section>
+
+<!-- OVER ONS -->
+<section id="over">
+<div class="title">
+
+<span>OVER SIMPLYSITES</span>
+
+<h2>Een professionele website hoeft niet duur te zijn.</h2>
+
+<p>
+Wij geloven dat iedere ondernemer een moderne website verdient.
+Daarom bouwen wij snelle, veilige en stijlvolle websites voor een eerlijke prijs.
+Geen ingewikkelde abonnementen of verborgen kosten.
+</p>
+
+</div>
+
+<div class="about-grid">
+
+<div class="about-card">
+
+<h3>⚡ Razendsnel</h3>
+
+<p>
+Onze websites laden snel en zijn geoptimaliseerd voor Google.
+</p>
+
+</div>
+
+<div class="about-card">
+
+<h3>📱 Responsive</h3>
+
+<p>
+Uw website werkt perfect op telefoons, tablets en computers.
+</p>
+
+</div>
+
+<div class="about-card">
+
+<h3>🎨 Modern Design</h3>
+
+<p>
+Strakke ontwerpen die vertrouwen uitstralen naar uw klanten.
+</p>
+
+</div>
+
+<div class="about-card">
+
+<h3>🤝 Persoonlijke service</h3>
+
+<p>
+Wij denken met u mee van begin tot eind.
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ========================= -->
+<!-- WAAROM -->
+<!-- ========================= -->
+
+<section class="why">
+
+<div class="title">
+
+<span>WAAROM SIMPLYSITES?</span>
+
+<h2>Waarom ondernemers voor ons kiezen</h2>
+
+</div>
+
+<div class="why-grid">
+
+<div class="why-box">
+
+<h1>🚀</h1>
+
+<h3>Snelle oplevering</h3>
+
+<p>
+Uw website staat vaak al binnen enkele dagen online.
+</p>
+
+</div>
+
+<div class="why-box">
+
+<h1>🎁</h1>
+
+<h3>Eerste jaar domeinnaam cadeau</h3>
+
+<p>
+Bij ieder pakket ontvangt u het eerste jaar uw domeinnaam gratis.
+</p>
+
+</div>
+
+<div class="why-box">
+
+<h1>🛠️</h1>
+
+<h3>Nazorg</h3>
+
+<p>
+Ook na oplevering helpen wij graag met kleine wijzigingen.
+</p>
+
+</div>
+
+<div class="why-box">
+
+<h1>💬</h1>
+
+<h3>Direct contact</h3>
+
+<p>
+Geen callcenters, maar persoonlijk contact via WhatsApp of e-mail.
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ========================= -->
+<!-- PAKKETTEN -->
+<!-- ========================= -->
+
+<section id="pakketten">
+
+<div class="title">
+
+<span>PAKKETTEN</span>
+
+<h2>Kies het pakket dat bij uw onderneming past.</h2>
+
+</div>
+
+<div class="pricing">
+
+<div class="plan">
+
+<h3>Starter</h3>
+
+<div class="price">€149</div>
+
+<ul>
+
+<li>✅ 1 pagina</li>
+<li>✅ Responsive</li>
+<li>✅ Contactformulier</li>
+<li>✅ WhatsApp knop</li>
+<li>✅ Basis SEO</li>
+
+</ul>
+
+<a href="#contact" class="btn">
+
+Bestellen
+
+</a>
+
+</div>
+
+<div class="plan popular">
+
+<div class="popular-tag">
+
+⭐ Meest gekozen
+
+</div>
+
+<h3>Business</h3>
+
+<div class="price">€249</div>
+
+<ul>
+
+<li>✅ Tot 5 pagina's</li>
+<li>✅ Google Maps</li>
+<li>✅ Fotogalerij</li>
+<li>✅ Contactformulier</li>
+<li>✅ Responsive</li>
+<li>✅ SEO</li>
+<li>✅ Kleine wijzigingen mogelijk</li>
+
+</ul>
+
+<a href="#contact" class="btn">
+
+Bestellen
+
+</a>
+
+</div>
+
+<div class="plan">
+
+<h3>Premium</h3>
+
+<div class="price">€399</div>
+
+<ul>
+
+<li>✅ Alles uit Business</li>
+<li>✅ Onbeperkte pagina's</li>
+<li>✅ Animaties</li>
+<li>✅ Reviews</li>
+<li>✅ Prioriteit support</li>
+
+</ul>
+
+<a href="#contact" class="btn">
+
+Bestellen
+
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ========================= -->
+<!-- INTRODUCTIE -->
+<!-- ========================= -->
+
+<section class="offer">
+
+<h2>🎉 Introductieactie</h2>
+
+<p>
+
+Profiteer tijdelijk van onze openingsactie!
+
+</p>
+
+<div class="offer-box">
+
+<h3>
+
+🌍 Het eerste jaar van uw domeinnaam krijgt u helemaal gratis.
+
+</h3>
+
+<p>
+
+Daarna betaalt u alleen de jaarlijkse kosten van uw domeinnaam en hosting.
+Deze blijven volledig op uw eigen naam staan.
+
+</p>
+
+<a href="#contact" class="btn">
+Vraag een offerte aan
+</a>
+
+</div>
+</section>
+
+<!-- REVIEWS -->
+
+<section id="reviews">
+
+<div class="title">
+
+<span>REVIEWS</span>
+
+<h2>Wat klanten zeggen</h2>
+
+<p>
+Wij streven naar tevreden klanten en langdurige samenwerkingen.
+</p>
+
+</div>
+
+<div class="pricing">
+
+<div class="about-card">
+
+⭐⭐⭐⭐⭐
+
+<h3>Fatima</h3>
+
+<p>
+
+"Mijn website zag er binnen een paar dagen fantastisch uit.
+Professioneel en goede communicatie!"
+
+</p>
+
+</div>
+
+<div class="about-card">
+
+⭐⭐⭐⭐⭐
+
+<h3>Ahmed</h3>
+
+<p>
+
+"Super snelle service en precies geworden zoals ik wilde."
+
+</p>
+
+</div>
+
+<div class="about-card">
+
+⭐⭐⭐⭐⭐
+
+<h3>Sarah</h3>
+
+<p>
+
+"Goede prijs en een prachtige website.
+Zeker een aanrader."
+
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ========================= -->
+<!-- FAQ -->
+<!-- ========================= -->
+
+<section>
+
+<div class="title">
+
+<span>FAQ</span>
+
+<h2>Veelgestelde vragen</h2>
+
+</div>
+
+<div class="faq">
+
+<div class="faq-item">
+
+<button>
+
+Hoe lang duurt een website?
+
+<span>+</span>
+
+</button>
+
+<div class="answer">
+
+Meestal tussen de 2 en 7 werkdagen.
+
+</div>
+
+</div>
+
+<div class="faq-item">
+
+<button>
+
+Is mijn website mobielvriendelijk?
+
+<span>+</span>
+
+</button>
+
+<div class="answer">
+
+Ja, iedere website werkt perfect op mobiel, tablet en computer.
+
+</div>
+
+</div>
+
+<div class="faq-item">
+
+<button>
+
+Moet ik zelf hosting regelen?
+
+<span>+</span>
+
+</button>
+
+<div class="answer">
+
+Nee hoor! Wij helpen u met alles.
+Het eerste jaar van uw domeinnaam krijgt u cadeau.
+
+</div>
+
+</div>
+
+<div class="faq-item">
+
+<button>
+
+Kan ik later nog iets aanpassen?
+
+<span>+</span>
+
+</button>
+
+<div class="answer">
+
+Ja! Kleine wijzigingen zijn ook na oplevering mogelijk.
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ========================= -->
+<!-- CONTACT -->
+<!-- ========================= -->
+
+<section id="contact">
+
+<div class="title">
+
+<span>CONTACT</span>
+
+<h2>Vraag vrijblijvend een offerte aan</h2>
+
+</div>
+
+<form>
+
+<input type="text" placeholder="Naam" required>
+
+<input type="email" placeholder="E-mailadres" required>
+
+<input type="text" placeholder="Bedrijfsnaam">
+
+<textarea placeholder="Vertel iets over uw website..." rows="6"></textarea>
+
+<button class="btn">
+
+Verstuur aanvraag
+
+</button>
+
+</form>
+
+</section>
+
+
+<a class="whatsapp"
+href="https://wa.me/31621667868"
+target="_blank">
+
+💬
+
+</a>
+
+
+<footer>
+
+<h2>
+
+Simply<span>Sites</span>
+
+</h2>
+
+<p>
+
+Professionele websites voor ondernemers.
+
+</p>
+
+<div class="footer-links">
+
+<a href="#">Home</a>
+
+<a href="#over">Over</a>
+
+<a href="#pakketten">Pakketten</a>
+
+<a href="#contact">Contact</a>
+
+</div>
+
+<p class="copy">
+
+© 2026 SimplySites.nl
+Alle rechten voorbehouden.
+
+</p>
+
+</footer>
+
+<button id="topBtn">
+
+↑
+
+</button>
+
+<script>
+
+const items=document.querySelectorAll(".faq-item");
+
+items.forEach(item=>{
+
+const btn=item.querySelector("button");
+
+btn.onclick=()=>{
+
+item.classList.toggle("open");
+
+}
+
+});
+
+const topBtn=document.getElementById("topBtn");
+
+window.addEventListener("scroll",()=>{
+
+if(window.scrollY>400){
+
+topBtn.style.display="flex";
+
+}else{
+
+topBtn.style.display="none";
+
+}
+
+});
+
+topBtn.onclick=()=>{
+
+window.scrollTo({
+
+top:0,
+
+behavior:"smooth"
+
+});
+
+}
+
+</script>
+
+</body>
+</html>
